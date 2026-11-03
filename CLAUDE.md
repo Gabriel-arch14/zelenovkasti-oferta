@@ -41,8 +41,9 @@ Next.js 16 (App Router), TypeScript, Tailwind v4, Supabase (Postgres, RLS), zod,
 ## Състояние
 
 - Готово: калкулатор, запис на запитвания, PDF генератор, имейли с Resend (PDF към клиента, известие към собственика), 31 теста.
-- Подготвено: basePath /oferta и инструкции за вграждане (README, "Вграждане в сайта ЗеленоВкъщи"). Основният сайт е отделен проект във Vercel и препраща /oferta с rewrites.
-- Следва (в този ред): 1) качване в GitHub и Vercel + rewrites в основния сайт; 2) админ панел.
+- Онлайн: калкулаторът е Vercel проект zelenovkasti-oferta; основният сайт (zelenovkashti, отделно репо) препраща /oferta с rewrites и има бутон „Изчислете цена“. Демо: https://zelenovkashti.vercel.app/oferta
+- README е за портфолио; снимките са в docs/ (step-2.png, mobile.png, pdf.png).
+- Следва: админ панел.
 - Env за имейли: RESEND_API_KEY, OWNER_EMAIL, EMAIL_FROM (по избор).
 
 ## Команди
