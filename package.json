@@ -1,0 +1,38 @@
+{
+  "name": "zelenovkashti-quote",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "tsx --test lib/pricing.test.ts lib/quote-meta.test.ts lib/email/templates.test.ts && npm run test:pdf",
+    "test:pdf": "esbuild lib/pdf/quote-pdf.test.ts --bundle --platform=node --format=esm --packages=external --outfile=out/.build/quote-pdf.test.mjs --log-level=warning && node --test out/.build/quote-pdf.test.mjs",
+    "pdf:sample": "esbuild scripts/sample-pdf.ts --bundle --platform=node --format=esm --packages=external --outfile=out/.build/sample-pdf.mjs --log-level=warning && node out/.build/sample-pdf.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/alegreya": "^5.3.0",
+    "@fontsource-variable/onest": "^5.3.1",
+    "@react-pdf/renderer": "^4.9.0",
+    "@supabase/supabase-js": "^2.117.3",
+    "next": "16.4.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "resend": "^6.37.0",
+    "server-only": "^0.0.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "esbuild": "0.28.2",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.1",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  }
+}

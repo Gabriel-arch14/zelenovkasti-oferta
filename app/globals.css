@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* Цветове и шрифтове на ЗеленоВкъщи Калкулатор */
+@theme {
+  --color-ink: #12301e;
+  --color-lawn: #2f6e40;
+  --color-meadow: #edf2e8;
+  --color-paper: #fafbf7;
+  --color-line: #c3cfb8;
+  --color-muted: #475c4d;
+  --color-dandelion: #e9b82d;
+  --color-dandelion-deep: #d9a519;
+  --color-danger: #a3261b;
+
+  --font-display: "Alegreya Variable", Georgia, serif;
+  --font-sans: "Onest Variable", system-ui, sans-serif;
+}
+
+html {
+  background: var(--color-meadow);
+}
+
+body {
+  background: var(--color-meadow);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.55;
+}
+
+/* Видим фокус при работа с клавиатура */
+:focus-visible {
+  outline: 3px solid var(--color-ink);
+  outline-offset: 3px;
+}
+.on-dark :focus-visible {
+  outline-color: #fff;
+}
+
+/* Ивици като на окосена трева. Това е запомнящият се елемент на страницата. */
+.lawn-stripes {
+  background-color: var(--color-lawn);
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0 26px,
+    rgba(0, 0, 0, 0.09) 26px 52px
+  );
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .soft-transition {
+    transition:
+      background-color 0.15s ease,
+      border-color 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+}
